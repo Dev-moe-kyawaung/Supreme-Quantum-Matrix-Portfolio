@@ -1,0 +1,39 @@
+{
+    "name": "Supreme Quantum Matrix Portfolio",
+    "short_name": "Q-MKA",
+    "description": "Supreme Quantum Android Architect Portfolio by Moe Kyaw Aung",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#06061a",
+    "theme_color": "#00f0ff",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/3d/textures/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/3d/textures/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/3d/textures/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Projects",
+            "url": "/#projects",
+            "description": "View quantum projects"
+        },
+        {
+            "name": "Contact",
+            "url": "/#contact",
+            "description": "Get in touch"
+        }
+    ]
+}
