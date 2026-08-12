@@ -1,0 +1,313 @@
+/* ============ SUPREME QUANTUM MAIN STYLES ============ */
+
+:root {
+    --quantum-primary: #00f0ff;
+    --quantum-secondary: #9b59b6;
+    --quantum-accent: #ffd700;
+    --quantum-bg: #06061a;
+    --quantum-bg-light: #0a0a2e;
+    --quantum-text: #ffffff;
+    --quantum-text-dark: #0a0a2e;
+    
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+    
+    --neon-glow: 0 0 20px rgba(0, 240, 255, 0.3);
+    --glow-strong: 0 0 40px rgba(0, 240, 255, 0.5);
+    --glow-purple: 0 0 20px rgba(155, 89, 182, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--quantum-bg);
+    color: var(--quantum-text);
+    overflow-x: hidden;
+    cursor: crosshair;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--quantum-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--quantum-primary);
+    border-radius: 4px;
+    box-shadow: var(--neon-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--quantum-secondary);
+    box-shadow: var(--glow-purple);
+}
+
+/* ============ PRELOADER ============ */
+
+.supreme-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--quantum-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.quantum-loader-ultimate {
+    text-align: center;
+    position: relative;
+}
+
+.hologram-loader {
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--quantum-primary);
+    border-top-color: var(--quantum-secondary);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    animation: spin 2s linear infinite;
+    box-shadow: var(--neon-glow);
+}
+
+.quantum-supreme-logo {
+    margin: 20px 0;
+}
+
+.logo-q {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--quantum-primary);
+    text-shadow: var(--glow-strong);
+    font-family: var(--font-display);
+}
+
+.logo-atom {
+    color: var(--quantum-secondary);
+    font-size: 36px;
+    display: block;
+    margin-top: -20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.loader-progress {
+    width: 250px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--quantum-primary), var(--quantum-secondary), var(--quantum-accent));
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: var(--neon-glow);
+}
+
+/* ============ GLASS MORPHISM ============ */
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-dark {
+    background: rgba(6, 6, 26, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+/* ============ QUANTUM BUTTONS ============ */
+
+.btn-quantum-primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--quantum-primary), var(--quantum-secondary));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.btn-quantum-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+}
+
+.btn-quantum-primary .btn-icon {
+    font-size: 18px;
+    animation: spin 4s linear infinite;
+}
+
+/* ============ QUANTUM CARDS ============ */
+
+.quantum-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(155, 89, 182, 0.05));
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.quantum-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+    border-color: var(--quantum-primary);
+}
+
+.quantum-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shine 3s ease-in-out infinite;
+}
+
+/* ============ HOLOGRAMS ============ */
+
+.holo-card {
+    position: relative;
+    background: linear-gradient(45deg, rgba(0, 240, 255, 0.1), rgba(155, 89, 182, 0.1));
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, var(--quantum-primary), var(--quantum-secondary)) 1;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.holo-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%);
+    animation: holographic 3s linear infinite;
+}
+
+.holo-scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--quantum-primary), transparent);
+    animation: scan 4s linear infinite;
+}
+
+/* ============ QUANTUM NAVIGATION ============ */
+
+.supreme-navbar {
+    background: rgba(6, 6, 26, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    padding: 15px 0;
+    transition: all 0.5s ease;
+}
+
+.supreme-navbar.scrolled {
+    background: rgba(6, 6, 26, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.supreme-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.supreme-brand .brand-icon {
+    font-size: 24px;
+    color: var(--quantum-primary);
+    animation: spin 10s linear infinite;
+}
+
+.supreme-brand .brand-text {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+}
+
+.brand-text .text-quantum {
+    color: var(--quantum-primary);
+    text-shadow: var(--neon-glow);
+}
+
+/* Navbar Links */
+.supreme-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.supreme-navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--quantum-primary);
+    box-shadow: var(--neon-glow);
+    transition: width 0.3s ease;
+}
+
+.supreme-navbar .nav-link:hover::before {
+    width: 80%;
+}
+
+.supreme-navbar .nav-link:hover {
+    color: var(--quantum-primary);
+    text-shadow: var(--neon-glow);
+}
