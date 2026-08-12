@@ -1,0 +1,108 @@
+/* Dark Theme (Default) */
+[data-theme="quantum-dark"] {
+    --bg-primary: #06061a;
+    --bg-secondary: #0a0a2e;
+    --bg-tertiary: #0f0f3d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0c0;
+    --accent-primary: #00f0ff;
+    --accent-secondary: #9b59b6;
+    --accent-tertiary: #ffd700;
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Light Theme */
+[data-theme="quantum-light"] {
+    --bg-primary: #f0f0ff;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e8e8f0;
+    --text-primary: #0a0a2e;
+    --text-secondary: #4a4a5a;
+    --accent-primary: #0066cc;
+    --accent-secondary: #9b59b6;
+    --accent-tertiary: #cc9900;
+    --border-color: rgba(0, 0, 0, 0.1);
+    
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Glass Effect Light */
+[data-theme="quantum-light"] .glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Neon Effects */
+.neon-text {
+    color: var(--accent-primary);
+    text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary), 0 0 40px var(--accent-primary);
+}
+
+.neon-border {
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 0 10px var(--accent-primary), inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.neon-glow {
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 240, 255, 0.8);
+    }
+}
+
+/* Grid Patterns */
+.quantum-grid {
+    background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Particles Animation */
+.particle-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: particleFloat 10s linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
