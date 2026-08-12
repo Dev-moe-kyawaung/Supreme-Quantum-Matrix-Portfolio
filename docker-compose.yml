@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  quantum-portfolio:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - QUANTUM_ENV=production
+    volumes:
+      - ./assets:/usr/share/nginx/html/assets
+    restart: always
