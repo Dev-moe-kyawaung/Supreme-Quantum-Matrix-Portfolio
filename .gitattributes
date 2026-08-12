@@ -1,0 +1,26 @@
+# Auto detect text files
+* text=auto
+
+# Source files
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf diff=javascript syntax=javascript
+*.json text eol=lf diff=json syntax=json
+*.md text eol=lf
+
+# Images
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+*.svg binary
+
+# Fonts
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# 3D Models
+*.glb binary
+*.gltf binary
